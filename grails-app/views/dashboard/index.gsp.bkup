@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>e-Governance | Dashboard</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+       
+        
+        <link href="${resource(dir:'css/egov_css/',file:'bootstrap.min.css')}" rel="stylesheet" type="text/css" />
+        <link href="${resource(dir:'css/egov_css/',file:'font-awesome.min.css')}" rel="stylesheet" type="text/css" />
+        
+         <!-- Theme style -->
+        <link href="${resource(dir:'css/egov_css/',file:'AdminLTE.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- Ionicons -->
+        <link href="${resource(dir:'css/egov_css/',file:'ionicons.min.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- Morris chart -->
+        <link href="${resource(dir:'css/egov_css/morris/',file:'morris.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- jvectormap -->
+		<link href="${resource(dir:'css/egov_css/jvectormap/',file:'jquery-jvectormap-1.2.2.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- Date Picker -->
+        <link href="${resource(dir:'css/egov_css/datepicker/',file:'datepicker3.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- Daterange picker -->
+		<link href="${resource(dir:'css/egov_css/daterangepicker/',file:'daterangepicker-bs3.css')}" rel="stylesheet" type="text/css" />
+        
+        <!-- bootstrap wysihtml5 - text editor -->
+		<link href="${resource(dir:'css/egov_css/bootstrap-wysihtml5/',file:'bootstrap3-wysihtml5.min.css')}" rel="stylesheet" type="text/css" />
+        
+ 
+    </head>
+    <body class="skin-blue">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+           <img src="${resource(dir:'egov_img',file:'logo.png')}" alt="Logo" width="100%" border="0"> </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="javascript:" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->
+                                            <a href="">
+                                                <div class="pull-left">
+                                                    <img src="${resource(dir:'egov_img',file:'avatar3.png')}" class="img-circle" alt="User Image"/>
+                                                </div>
+                                                <h4>
+                                                    Amrita Vidyalayam Delhi
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+                                                <p>Approval for new infrastructure</p>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="">
+                                                <div class="pull-left">
+                                                    <img src="${resource(dir:'egov_img',file:'avatar2.png')}" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Navodaya Public School
+                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                                </h4>
+                                                <p>Seeking final assessments guidelines!</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-warning"></i>
+                                <span class="label label-warning">10</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><a href="">
+                                                <i class="ion ion-ios7-people info"></i> 5000 new students joined today
+                                            </a>
+                                        </li>
+                                        
+                                        <li><a href="javascript:"><i class="fa fa-warning danger"></i> School performance review pending
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="">
+                                                <i class="ion ion-checkmark-round success"></i> Kendriya Vidyalam Calicut registration complete
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="">
+                                                <i class="ion ion-ios7-person danger"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- Tasks: style can be found in dropdown.less -->
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tasks"></i>
+                                <span class="label label-danger">3</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 3 tasks</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- Task item -->
+                                            <a href="">
+                                                <h3>
+                                                    Profile completion status
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="">
+                                                <h3>
+                                                    South zone schools mark entry status
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="">
+                                                <h3>
+                                                    CBSE rating yet to be done for 98 schools
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span>${name}<i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                           
+                                <!-- User image 
+                               <li class="user-header bg-light-blue">
+                                    <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                                    <p>
+                                        Jane Doe - Web Developer
+                                        <small>Member since Nov. 2012</small>
+                                    </p>
+                                </li>
+                                -->
+                                <!-- Menu Body
+                              
+                                <li class="user-body">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </li>
+                                 -->
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+	                                        <a href="" class="btn btn-default btn-flat"><span class="glyphicon glyphicon-user"></span> Profile</a>
+	                                    	<a href="" class="btn btn-default btn-flat"><span class="glyphicon glyphicon-envelope"></span> Message</a>
+	                                    	<a href="${createLink(controller:'login',action:'index')}" class="btn btn-default btn-flat"><span class="glyphicon glyphicon-share"></span> Sign out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <!--<div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/avatar3.png" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, Jane</p>
+
+                            <a href="javascript:"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>-->
+                    <!-- search form -->
+                    <form action="" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                            <span class="input-group-btn">
+                                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li class="active">
+                            <g:link controller="dashboard" action="index_new">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </g:link>
+                        </li>
+                        <li class="treeview">
+                            <a href="javascript:">
+                                <i class="fa fa-line-chart"></i>
+                                <span>School Ratings</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li class="treeview"><a href="javascript:"><i class="fa fa-area-chart"></i> <span>CBSE Rating</span> <i class="fa fa-angle-left pull-right"></i></a>
+                                    <ul class="treeview-menu">
+                                        <li><g:link controller="ratings" action="acadRept"><i class="fa fa-angle-double-right"></i> Academic Reputation</g:link></li>
+                                        <li><g:link controller="ratings" action="trendAnalysis"><i class="fa fa-angle-double-right"></i> Predictive analytics</g:link></li>
+                                        <li><a href="infrastructure.html"><i class="fa fa-angle-double-right"></i> Infrastructure</a></li>
+                                        <li><a href="co-curriculur.html"><i class="fa fa-angle-double-right"></i> Co-Curriculur Education</a></li>
+                                        <li><a href="faculty-competence.html"><i class="fa fa-angle-double-right"></i> Faculty Competence</a></li>
+                                        <li><a href="parental-involvement.html"><i class="fa fa-angle-double-right"></i> Parental Involvement</a></li>
+                                    </ul>
+                                </li>
+								<li><a href="cumulative.html"><i class="fa fa-angle-double-right"></i> Cumulative Rating</a></li>
+                                <li><a href="school-self-rating.html"><i class="fa fa-angle-double-right"></i> School Self-Rating</a></li>
+                                <li><a href="parent-rating.html"><i class="fa fa-angle-double-right"></i> Parent Rating</a></li>
+                                <li><a href="teacher-rating.html"><i class="fa fa-angle-double-right"></i> Teacher Rating</a></li>
+                                <li><a href="student-rating.html"><i class="fa fa-angle-double-right"></i> Student Rating</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="javascript:">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>Data Admin</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><g:link controller="DataAdmin" action="teachProfile"><i class="fa fa-angle-double-right"></i> Faculty Profile</g:link></li>
+                                <!-- <li><g:link controller="DataAdmin" action="stdProfile"><i class="fa fa-angle-double-right"></i> Student Profile</g:link></li>  -->
+                                <li><g:link controller="DataAdmin" action="assessments"><i class="fa fa-angle-double-right"></i> Assessments</g:link></li>
+                                <li><g:link controller="DataAdmin" action="Performance"><i class="fa fa-angle-double-right"></i> Performance</g:link></li>
+                                <li><g:link controller="DataAdmin" action="stdreport"><i class="fa fa-angle-double-right"></i>  Student Report</g:link></li>
+                                <li><g:link controller="DataAdmin" action="regsub"><i class="fa fa-angle-double-right"></i> Registered Subjects</g:link></li>
+                                <li><g:link controller="DataAdmin" action="authoring"><i class="fa fa-angle-double-right"></i> Authoring</g:link></li>
+                                <li><g:link controller="DataAdmin" action="qnbank"><i class="fa fa-angle-double-right"></i> Question Bank</g:link></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="javascript:">
+                                <i class="fa fa-twitch"></i> <span>Forums</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                            	<li><g:link controller="forum" action="index"><i class="fa fa-angle-double-right"></i>  View Forum</g:link></li>
+                            	<li><g:link controller="forum" action="chat"><i class="fa fa-angle-double-right"></i>  Chat</g:link></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="javascript:">
+                                <i class="fa fa-edit"></i> <span>Account</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="messages.html"><i class="fa fa-angle-double-right"></i> Messages</a></li>
+                                <li><a href="profile.html"><i class="fa fa-angle-double-right"></i> Profile</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="javascript:">
+                                <i class="fa fa-folder"></i> <span>Main Screens</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/examples/login-screen.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="pages/examples/register-screen.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Dashboard
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="javascript:"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Dashboard</li>
+                    </ol>
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                    
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3>
+                                        98,764
+                                    </h3>
+                                    <p>
+                                        Unique Visitors
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3>
+                                        73<sup style="font-size: 20px">%</sup>
+                                    </h3>
+                                    <p>
+                                        Pass percentage nation wide
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-yellow">
+                                <div class="inner">
+                                    <h3>
+                                        1200
+                                    </h3>
+                                    <p>
+                                        New schools registred
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                </div>
+                                <a href="" class="small-box-footer">
+                                    More info <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-red">
+                                <div class="inner">
+                                    <h3>
+                                        SA
+                                    </h3>
+                                    <p>
+                                        Scheduled on 25-04-2015
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-clock"></i>
+                                </div>
+                                <a href="" class="small-box-footer">
+                                    Reschedule <i class="ion ion-refresh"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        
+                        
+                    </div><!-- /.row -->
+
+                    <!-- Main row -->
+                    <div class="row">
+                    
+                    
+                        <!-- Left col -->
+                        <section class="col-lg-6 connectedSortable">
+                        
+                        	<!-- Map box -->
+                            <div class="box ">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm daterange pull-right" data-toggle="tooltip" title="Date range" style="margin-right: 5px;"><i class="fa fa-calendar" ></i></button>
+                                        <button class="btn  btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+
+                                    <i class="fa fa-map-marker"></i>
+                                    <h3 class="box-title">
+                                        CBSE affliated schools
+                                    </h3>
+                                </div>
+                                <div class="box-body">
+                                    <div id="world-map" style="height: 350px;"></div>
+                                </div><!-- /.box-body-->
+                                <div class="box-footer no-border">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                            <div id="sparkline-1"></div>
+                                            <div class="knob-label">Visitors</div>
+                                        </div><!-- ./col -->
+                                        <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                                           <div id="sparkline-2"></div>
+                                            <div class="knob-label">Online</div>
+                                        </div><!-- ./col -->
+                                        <div class="col-xs-4 text-center">
+                                            <div id="sparkline-3"></div>
+                                            <div class="knob-label">Exists</div>
+                                        </div><!-- ./col -->
+                                    </div><!-- /.row -->
+                                </div>
+                            </div>
+                            <!-- /.box -->
+                            
+                            <!-- Performance box -->
+                            <div class="box ">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+                                    <i class="fa fa-line-chart"></i>
+                                    <h3 class="box-title">Performance history</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="line-chart" style="height: 400px;"></div>
+                                </div><!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                            
+                            <!-- Timeline -->
+                            <div class="box ">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+                                    <i class="fa fa-list-alt"></i>
+                                    <h3 class="box-title">Upcoming Events</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <ul class="timeline">
+									    
+									    <!-- timeline time label -->
+									    <li class="time-label">
+									        <span class="bg-blue"> 04 Feb 2015 </span>
+									    </li>
+									    <!-- /.timeline-label -->
+									
+									    <!-- timeline item -->
+									    <li>
+									        <!-- timeline icon -->
+									        <i class="fa fa-envelope bg-blue"></i>
+										        <div class="timeline-item">
+										            <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+										
+										            <h3 class="timeline-header"><a href="#">Invite for conference with CDAC</a> ...</h3>
+										            <div class="timeline-body">
+											            Meeting scheduled on 4th Feb of 2015 with CDAC. Should you accept it? 
+										            </div>
+										
+										            <div class='timeline-footer'>
+										                <a class="btn btn-primary btn-xs">Yes</a>
+										                <a class="btn btn-danger btn-xs">Decline</a>
+										            </div>
+										        </div>
+									    </li>
+									    <!-- END timeline item -->
+									    
+									    
+									    <!-- timeline time label -->
+									    <li class="time-label">
+									        <span class="bg-red"> 09 Mar 2015 </span>
+									    </li>
+									    <!-- /.timeline-label -->
+									
+									    <!-- timeline item -->
+									    <li>
+									        <!-- timeline icon -->
+									        <i class="fa fa-pencil bg-red"></i>
+										        <div class="timeline-item">
+										            <span class="time"><i class="fa fa-clock-o"></i> 10.00</span>
+										
+										            <h3 class="timeline-header"><a href="#">Commencement of Annual Examination</a> ...</h3>
+										            <div class="timeline-body">
+											            Annual Examination for class 10th is scheduled on 9th March of 2015.
+										            </div>
+										
+										            <div class='timeline-footer'>
+										                <button class="btn btn-warning btn-xs"><i class="fa fa-clock-o"></i> Set Reminder</button>
+										            </div>
+										        </div>
+									    </li>
+									    <!-- END timeline item -->
+									    
+									    <!-- END timeline item -->
+									    <li>
+									        <!-- timeline icon -->
+									        <i class="fa fa-clock-o bg-default"></i>
+									    </li>
+									    
+									    
+									</ul>
+                                </div><!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </section><!-- /.Left col -->
+                        
+                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+                        <section class="col-lg-6 connectedSortable">
+
+                            <!-- Gender Ratio box -->
+                            <div class="box ">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+                                    <i class="fa fa-male"></i> <i class="fa fa-female"></i>
+                                    <h3 class="box-title">Students gender ratio</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div class="chart" id="pie-chart" style="height: 200px;"></div>
+                                </div><!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                            
+                            <!-- Pass % Vs Average box -->
+							<div class="box ">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+                                    <i class="fa fa-university"></i>
+                                    <h3 class="box-title">Pass percentage versus grade "A"</h3>
+                                </div>
+                                <div class="box-body chart-responsive">
+                                    <div id="avg" style=" height: 400px; margin: 0 auto"></div>
+                                </div><!-- /.box-body -->
+                            </div>                            
+                            <!-- /.box -->
+                            
+                            <!-- Calendar -->
+                            <div class="box ">	
+                                <div class="box-header">
+                                    <i class="fa fa-calendar"></i>
+                                    <h3 class="box-title">Academic Calendar</h3>
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <!-- button with a dropdown -->
+                                        <div class="btn-group">
+                                            <button class="btn  btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                                            <ul class="dropdown-menu pull-right" role="menu">
+                                                <li><a href="#">Add new event</a></li>
+                                                <li><a href="#">Clear events</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">View calendar</a></li>
+                                            </ul>
+                                        </div>
+                                        <button class="btn  btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button class="btn  btn-sm" data-widget="remove" style="margin-right: 5px;"><i class="fa fa-times"></i></button>
+                                    </div><!-- /. tools -->
+                                </div><!-- /.box-header -->
+                                <div class="box-body no-padding">
+                                    <!--The calendar -->
+                                    <div id="calendar" style="width: 100%"></div>
+                                </div><!-- /.box-body -->
+                                
+                            </div><!-- /.box -->
+                            
+                            <!-- quick email widget -->
+                            <div class="box ">
+                                <div class="box-header">
+                                    <i class="fa fa-envelope"></i>
+                                    <h3 class="box-title">Quick Email</h3>
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">
+                                        <button class="btn  btn-sm" data-widget="remove" data-toggle="tooltip" title=""><i class="fa fa-times"></i></button>
+                                    </div><!-- /. tools -->
+                                </div>
+                                <div class="box-body">
+                                    <form action="#" method="post">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="emailto" placeholder="Email to:"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="subject" placeholder="Subject"/>
+                                        </div>
+                                        <div>
+                                            <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="box-footer clearfix">
+                                    <button class="pull-right btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Primary box 
+                            <div class="box box-solid box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Primary Solid Box</h3>
+                                    <div class="box-tools pull-right">
+                                        <button class="btn btn-primary btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button class="btn btn-primary btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    Box class: <code>.box.box-solid.box-primary</code>
+                                    <p>
+                                        amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel.
+                                        berliner weisse wort chiller adjunct hydrometer alcohol aau!
+                                        sour/acidic sour/acidic chocolate malt ipa ipa hydrometer.
+                                    </p>
+                                </div><!-- 
+                            </div><!-- /.box -->
+                            
+                            <!-- Info box
+                            <div class="box box-solid box-info">
+                                <div class="box-header">
+                                    <h3 class="box-title">Info Solid Box</h3>
+                                    <div class="box-tools pull-right">
+                                        <button class="btn btn-info btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        <button class="btn btn-info btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    Box class: <code>.box.box-solid.box-info</code>
+                                    <p>
+                                        amber, microbrewery abbey hydrometer, brewpub ale lauter tun saccharification oxidized barrel.
+                                        berliner weisse wort chiller adjunct hydrometer alcohol aau!
+                                        sour/acidic sour/acidic chocolate malt ipa ipa hydrometer.
+                                    </p>
+                                </div>
+                            </div><!-- /.box -->
+							
+
+                        </section><!-- right col -->
+                    </div><!-- /.row (main row) -->
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+        <!-- add new calendar event modal -->
+        
+        <!--  Footer  -->
+		<footer class="footer">
+        	<img src="${resource(dir:'egov_img',file:'avvp.png')}" alt="AVVP"> <img src="${resource(dir:'egov_img',file:'cdac-logo.png')}" border="0" alt="CDAC">
+        </footer>
+        <!--  Footer  -->
+
+		
+        <script src="${createLinkTo(dir:'js/egov_js/jquery_2.1.3',file:'jquery.min.js')}" type="text/javascript"></script>
+        <script src="${createLinkTo(dir:'js/egov_js/bootstrap',file:'bootstrap.min.js')}" type="text/javascript"></script>
+	
+		<script src="${createLinkTo(dir:'js/egov_js/jquery_ui_1.11.1',file:'jquery-ui.min.js')}" type="text/javascript"></script>
+        
+             
+        <!-- High Charts -->
+        <script src="${createLinkTo(dir:'js/egov_js/highcharts',file:'highcharts.js')}" type="text/javascript"></script>
+        <script src="${createLinkTo(dir:'js/egov_js/highcharts',file:'exporting.js')}" type="text/javascript"></script>
+        
+        
+        <!-- Morris.js charts -->
+		<script src="${createLinkTo(dir:'js/egov_js/raphael_2.1.0',file:'raphael-min.js')}" type="text/javascript"></script>
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/morris/',file:'morris.min.js')}" type="text/javascript"></script>
+        
+        
+		<!-- Sparkline -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/sparkline/',file:'jquery.sparkline.min.js')}" type="text/javascript"></script>
+        
+        <!-- jvectormap -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/jvectormap/',file:'jquery-jvectormap-1.2.2.min.js')}" type="text/javascript"></script>
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/jvectormap/',file:'jquery-jvectormap-world-mill-en.js')}" type="text/javascript"></script>
+       
+        <!-- jQuery Knob Chart -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/jqueryKnob/',file:'jquery.knob.js')}" type="text/javascript"></script>
+        
+        <!-- daterangepicker -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/daterangepicker/',file:'daterangepicker.js')}" type="text/javascript"></script>
+		
+        <!-- datepicker -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/datepicker/',file:'bootstrap-datepicker.js')}" type="text/javascript"></script>
+        
+        <!-- Bootstrap WYSIHTML5 -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/bootstrap-wysihtml5/',file:'bootstrap3-wysihtml5.all.min.js')}" type="text/javascript"></script>
+       
+        <!-- iCheck -->
+		<script src="${createLinkTo(dir:'js/egov_js/plugins/iCheck/',file:'icheck.min.js')}" type="text/javascript"></script>
+
+        <!-- AdminLTE App -->
+		<script src="${createLinkTo(dir:'js/egov_js/AdminLTE',file:'app.js')}" type="text/javascript"></script>
+
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+		<script src="${createLinkTo(dir:'js/egov_js/AdminLTE',file:'dashboard.js')}" type="text/javascript"></script>
+        
+        <script>
+      
+		  // High Charts 	
+		  $('document').ready(function () {
+			    $('#avg').highcharts({
+			        chart: {
+			            type: 'scatter',
+			            zoomType: 'xy'
+			        },
+			        title: {
+			            text: ''
+			        },
+			        subtitle: {
+			            text: ''
+			        },
+			        xAxis: {
+			            title: {
+			                enabled: true,
+			                text: 'No of students with grade "A"'
+			            },
+			            startOnTick: true,
+			            endOnTick: true,
+			            showLastLabel: true
+			        },
+			        yAxis: {
+			            title: {
+			                text: 'Average school CGPA'
+			            }
+			        },
+			        legend: {
+			            layout: 'vertical',
+			            align: 'left',
+			            verticalAlign: 'top',
+			            x: 500,
+			            y: 0,
+			            floating: true,
+			            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+			            borderWidth: 1
+			        },
+			        plotOptions: {
+			            scatter: {
+			                marker: {
+			                    radius: 5,
+			                    states: {
+			                        hover: {
+			                            enabled: true,
+			                            lineColor: 'rgb(100,100,100)'
+			                        }
+			                    }
+			                },
+			                states: {
+			                    hover: {
+			                        marker: {
+			                            enabled: false
+			                        }
+			                    }
+			                },
+			                tooltip: {
+			                    headerFormat: '<b>{series.name} - {point.key}</b><br>',
+			                    pointFormat: '{point.x} , {point.y} '
+			                }
+			            }
+			        },
+			        series: [
+			            
+			            {
+			            name: 'School id',
+			            color: 'green',
+			            data: [
+			       
+			            {name: 'School 3001', x : 79, y:  7.49}, {name: 'School 3002', x : 36, y:  8.61},
+			            {name: 'School 3003', x : 85, y:  8.06}, {name: 'School 3004', x : 88, y:  8.34},
+			            {name: 'School 3005', x : 76, y:  7.7}, {name: 'School 3006', x : 88, y:  6.95},
+			            {name: 'School 3007', x : 99, y:  7.4}, {name: 'School 3010', x : 9, y: 7.09},
+			            {name: 'School 3008', x : 10, y:  6.38},{name: 'School 3009', x : 108, y:  7.99}, 
+			            {name: 'School 3011', x : 38, y:  8.45},{name: 'School 3012', x : 35, y: 8.11},      
+			            {name: 'School 3013', x : 36, y: 8.02},{name: 'School 3014', x : 19, y:  8.1},
+			            {name: 'School 3015', x : 30, y:  8.06},{name: 'School 3017', x : 79, y:  8.2},   
+			            {name: 'School 3019', x : 116, y:  8.98},{name: 'School 3020', x : 134, y:  8.37},
+			            {name: 'School 3021', x : 79, y: 7.9}, {name: 'School 3022', x : 40, y: 7.77},      
+			            {name: 'School 3023', x : 93, y:  7.84},{name: 'School 3024', x : 8, y:  8.15},
+			            {name: 'School 3025', x : 6, y:  6.64},{name: 'School 3026', x : 51, y:  7.84},
+			            {name: 'School 3027', x : 99, y:  7.8},{name: 'School 3028', x : 29, y:  6.91},
+			            {name: 'School 3029', x : 16, y:  7.66},{name: 'School 3030', x : 19, y:  7.64},   
+			            {name: 'School 3031', x : 22, y:  7.85},{name: 'School 3032', x : 28, y:  6.74},
+			            {name: 'School 3034', x : 53, y:  7.47}, {name: 'School 3018', x : 24, y:  8.2},     
+			            {name: 'School 3035', x : 49, y:  7.65},{name: 'School 3036', x :37, y:  7.6},
+			            {name: 'School 3037', x : 13, y:  8.09},{name: 'School 3038', x : 11, y:  6.82},
+			            {name: 'School 3039', x : 23, y:  9.02},{name: 'School 3040', x : 59, y:  7.71},   
+			            {name: 'School 3041', x : 120, y:  8.23},{name: 'School 3042', x : 57, y:  6.02},
+			            {name: 'School 3043', x : 52, y: 7.81}, {name: 'School 3044', x : 8, y:  7.18},      
+			            {name: 'School 3045', x : 108, y:  8.38},{name: 'School 3046', x :46, y:  8.18},
+			            {name: 'School 3047', x : 33, y:  7.51},{name: 'School 3048', x :13, y:  6.34},
+			            {name: 'School 3049', x : 16, y:  7.92},{name: 'School 3050', x : 16, y:  7.15},
+			            {name: 'School 3051', x : 31, y:  6.88},{name: 'School 3052', x : 67, y:  7.99},   
+			            {name: 'School 3053', x : 5, y:  6.93},{name: 'School 3054', x : 69, y:  8.66},
+			            {name: 'School 3055', x : 63, y:  7.26},{name: 'School 3056', x : 5, y:  7.16},
+			            {name: 'School 3058', x : 3, y:  7.36},{name: 'School 3059', x : 1, y:  7.6},
+			            {name: 'School 3060', x : 72, y:  8.26},{name: 'School 3061', x : 18, y:  7.27},   
+			            {name: 'School 3062', x : 56, y:  9.06},{name: 'School 3063', x : 17, y:  6.26},
+			            {name: 'School 3064', x : 12, y: 7.38}, {name: 'School 3065', x : 56, y:  8.27},      
+			            {name: 'School 3066', x : 65, y:  7.5},{name: 'School 3067', x :41, y:  7.7},
+			            {name: 'School 3068', x : 51, y:  7.7},{name: 'School 3069', x :6, y:  7.33},
+			            {name: 'School 3070', x : 11, y:  7.91},{name: 'School 3071', x : 23, y:  7.29},
+			            {name: 'School 3072', x : 58, y:  7.58},{name: 'School 3073', x : 15, y:  7.98},   
+			            {name: 'School 3075', x : 5, y: 8.72},{name: 'School 3076', x : 69, y:  7.86},
+			            {name: 'School 3077', x : 33, y:  7.81},{name: 'School 3079', x :104, y: 8.06},
+			            {name: 'School 3080', x : 32, y: 8.09},{name: 'School 3057', x :95, y:  6.37},
+			            {name: 'School 3081', x : 91, y:  7.65},{name: 'School 3082', x :135, y:  8.61},
+			            {name: 'School 3083', x : 36, y:  7.73},{name: 'School 3084', x : 22, y:  6.98},
+			            {name: 'School 3085', x : 13, y:  7.7},{name: 'School 3086', x :11, y:  7.16},   
+			            {name: 'School 3087', x : 38, y:  7.24},{name: 'School 3089', x : 131, y: 7.47},       
+			            {name: 'School 3091', x : 18, y:  7.8},{name: 'School 3090', x : 112, y:  8.07},
+			            {name: 'School 3094', x :120, y:  8.16},{name: 'School 3095', x : 19, y:  8.14},
+			            {name: 'School 3097', x : 31, y:  7.75},{name: 'School 3151', x : 50, y:  7.59},   
+			            {name: 'School 3152', x : 48, y: 5.87},{name: 'School 3153', x : 27, y:  7.97},
+			            {name: 'School 3155', x : 45, y:  7},{name: 'School 3156', x :52, y: 7.72},
+			            {name: 'School 3157', x : 19, y: 7}, {name: 'School 3158', x : 81, y: 7.82},
+			            {name: 'School 3159', x : 48, y:  7.96},{name: 'School 3160', x : 65, y:  8.06},   
+			            {name: 'School 3161', x : 74, y:7.66},{name: 'School 3162', x : 144, y:  8.43},
+			            {name: 'School 3163', x :7, y: 6.52},{name: 'School 3164', x :77, y:8.69},
+			            {name: 'School 3165', x : 78, y: 8.17}, {name: 'School 3166', x : 114, y: 7.47},
+			            {name: 'School 3167', x : 9, y: 6.48},{name: 'School 3168', x : 143, y:  7.52},   
+			            {name: 'School 3169', x : 351, y:7.47},{name: 'School 3170', x : 52, y:  7.67},
+			            {name: 'School 3171', x : 62, y:  7.48},{name: 'School 3172', x :93, y: 6.97},
+			            {name: 'School 3173', x : 186, y: 8.26},{name: 'School 3096', x : 37, y:  8.3},
+			            {name: 'School 3174', x : 90, y: 6.93},{name: 'School 3175', x :205, y: 6.79},
+			            {name: 'School 3177', x : 99, y:  6.99},{name: 'School 3178', x : 256, y:7.72},
+			            {name: 'School 3180', x :24, y: 6.26},{name: 'School 3181', x :71, y:7.17},
+			            {name: 'School 3182', x : 45, y:7.81},{name: 'School 3179', x : 70, y:  7.95},
+			            {name: 'School 3184', x : 50, y:7.35},{name: 'School 3185', x : 10, y:  7.05},   
+			            {name: 'School 3186', x : 124, y:7.48},{name: 'School 3187', x : 117, y: 7.66},
+			            {name: 'School 3188', x : 49, y:  6.87},{name: 'School 3189', x :170, y:8.45},
+			            {name: 'School 3190', x : 30, y: 8.56},{name: 'School 3191', x : 48, y: 8.1},
+			            {name: 'School 3194', x : 21, y: 6.83},{name: 'School 3192', x : 47, y: 5.97}, 
+			            {name: 'School 3195', x : 209, y:7.14},{name: 'School 3196', x :35, y:  6.97},
+			            {name: 'School 3197', x :23, y: 8.03},{name: 'School 3198', x :57, y:6.49},
+			            {name: 'School 3199', x : 95, y: 6.83}, {name: 'School 3200', x : 85, y: 8.11},
+			            {name: 'School 3201', x : 51, y: 8.1},{name: 'School 3202', x : 30, y:  7.55},   
+			            {name: 'School 3203', x : 54, y:7.46},{name: 'School 3204', x : 0, y:  6}]
+			                },
+			                    
+			        
+			    ]
+			        });
+
+
+			    var morrisdata = [
+			  		      { y: '2004', a: 50, b: 90},
+			  		      { y: '2005', a: 65,  b: 75},
+			  		      { y: '2006', a: 50,  b: 50},
+			  		      { y: '2007', a: 75,  b: 60},
+			  		      { y: '2008', a: 80,  b: 65},
+			  		      { y: '2009', a: 90,  b: 70},
+			  		      { y: '2010', a: 100, b: 75},
+			  		      { y: '2011', a: 115, b: 75},
+			  		      { y: '2012', a: 120, b: 85},
+			  		      { y: '2013', a: 145, b: 85},
+			  		      { y: '2014', a: 160, b: 95}
+			  		    ],
+			  		    config = {
+			  		      data: morrisdata,
+			  		      xkey: 'y',
+			  		      ykeys: ['a', 'b'],
+			  		      labels: ['North Zone', 'South Zone'],
+			  		      fillOpacity: 1,
+			  		      hideHover: 'auto',
+			  		      behaveLikeLine: true,
+			  		      resize: true,
+			  		      pointFillColors:['#FFF'],
+			  		      pointStrokeColors: ['green'],
+			  		      lineColors:['gray','orange']
+			  		  };
+			  	
+			  		  config.element = 'line-chart';
+			  		  Morris.Line(config);
+
+			  		  Morris.Donut({
+			  			  element: 'pie-chart',
+			  			  colors:['orange','green','grey'], 
+			  			  data: [
+			  			    {label: "Female", value: 35},
+			  			    {label: "Male", value: 63},
+			  			    {label: "Not Specified", value: 2}
+			  			  ]
+			  			});
+
+		        
+			});
+
+			
+       
+        </script>
+        
+   </body>
+</html>

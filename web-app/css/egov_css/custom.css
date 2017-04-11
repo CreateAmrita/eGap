@@ -1,0 +1,69 @@
+.callout{
+	box-shadow: 5px 5px 5px #888888;
+	padding: 1px 10px 10px 10px;
+	border-radius: 5px;
+}
+
+.callout-info{
+	background-color: #00c0ef !important;
+	color: #fff;
+}
+
+.callout h3{
+	text-align: center;
+}
+
+.btn-container{
+	width: 20%;
+	margin: 0 auto;
+}
+
+.navbar-nav>li{
+	padding-right: 1em;
+}
+
+.btn-container1{
+	width: 35%;
+	padding-top:1.4em;
+	margin: 0 auto;
+}
+
+#container{
+	height:400px;
+}
+
+.register-box{
+	width: 75%;
+	box-shadow: 5px 5px 5px #888888;
+	margin: 0 auto;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+.form-control-feedback{
+	top:10px;
+}
+
+.register-box-body{
+	background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666;
+}
+
+.btn-large{
+	background-color: #00C0EF !important;
+	border-radius:5px !important;
+}
+
+.labelName{
+	font-size: 1.5em;
+	text-align: center;
+	padding-top: 1em;
+    color: black;
+}
+
+.radioPdng{
+	padding-left: 1em;
+    padding-right: 2em;
+    font-size: 1.2em;
+}
