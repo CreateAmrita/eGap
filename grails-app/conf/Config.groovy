@@ -68,11 +68,7 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
-//      grails.serverURL = "http://cce.amritacreate.org/${appName}"
-//		grails.serverURL = "http://192.168.171.206:8080"
-//		grails.serverURL = "http://localhost:8080"
-		grails.serverURL = "http://schoolgov.in"
-    }
+//      grails.serverURL = ""
 }
 
 // log4j configuration
