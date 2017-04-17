@@ -63,7 +63,7 @@ $(document).ready(function(){
 			$("#ten").addClass("active");
 		}
 
-	else if((window.location.href.indexOf("vocEnrlmnt")> -1) || (window.location.href.indexOf("incomeWisePerf")> -1))
+	else if((window.location.href.indexOf("vocEnrlmnt")> -1) || (window.location.href.indexOf("incomeWisePerf")> -1) || (window.location.href.indexOf("psa")> -1) || (window.location.href.indexOf("cbseCCE")> -1) || (window.location.href.indexOf("plusTwo")> -1) || (window.location.href.indexOf("classPref")> -1) || (window.location.href.indexOf("teachStd")> -1) || (window.location.href.indexOf("stdTeachRatio")> -1) || (window.location.href.indexOf("coSchoImpact")> -1) || (window.location.href.indexOf("acadAnalysis")> -1) || (window.location.href.indexOf("vocInfo")> -1) || (window.location.href.indexOf("class7Perf")> -1) || (window.location.href.indexOf("class9Perf")> -1) || (window.location.href.indexOf("subjAnalysis")> -1) || (window.location.href.indexOf("stdPref")> -1))
 		
 		{
 	

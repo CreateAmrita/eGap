@@ -58,7 +58,7 @@
                     <li><g:link controller="ratings" action="geoTrendAnalysis"><i class="fa fa-angle-double-right"></i> Region Analytics</g:link></li>
                     <li><g:link controller="performanceCbse" action="psa"><i class="fa fa-angle-double-right"></i>Assessment Comparison</g:link></li>
                 	<!--  <li><g:link controller="performanceCbse" action="cbseCCE"><i class="fa fa-angle-double-right"></i>Co-Scholastic</g:link></li>
-                	<li><g:link controller="performanceCbse" action="plusTwo"><i class="fa fa-angle-double-right"></i>Scholastic</g:link></li>-->
+                	<li><g:link controller="performanceCbse" action="plusTwo"><i class="fa fa-angle-double-right"></i>Scholastic</g:link></li> -->
                     <!-- 
                      <li><a href="infrastructure.html"><i class="fa fa-angle-double-right"></i> Infrastructure</a></li>
                      <li><a href="co-curriculur.html"><i class="fa fa-angle-double-right"></i> Co-Curriculur Education</a></li>
@@ -85,7 +85,7 @@
                      <li><g:link controller="CCE" action="studOptionalSubjReport"><i class="fa fa-angle-double-right"></i> Student Optional Subject</g:link></li>
                      <li><g:link controller="CCE" action="studPositionReport"><i class="fa fa-angle-double-right"></i> Student position Report</g:link></li>
                      <li><g:link controller="CCE" action="studTransferReport"><i class="fa fa-angle-double-right"></i> Student transfer Report</g:link></li>
-                     <li><g:link controller="studTeachGraphs" action="passPerf"><i class="fa fa-angle-double-right"></i> Student Class Pass Performance</g:link>
+                     <li><g:link controller="studTeachGraphs" action="passPerf"><i class="fa fa-angle-double-right"></i> Student Pass Performance</g:link>
                      <li><g:link controller="studTeachGraphs" action="gradeDist"><i class="fa fa-angle-double-right"></i> Student Grade Wise Distribution</g:link>
                      <li><g:link controller="studTeachGraphs" action="studPerf"><i class="fa fa-angle-double-right"></i> Student Performance</g:link>
                      <li><g:link controller="studTeachGraphs" action="gdAvgLowStudPerf"><i class="fa fa-angle-double-right"></i>Good/Avg/Low Students</g:link>
@@ -196,7 +196,7 @@
                      <li><g:link controller="CCE" action="studOptionalSubjReport"><i class="fa fa-angle-double-right"></i> Student Optional Subject</g:link></li>
                      <li><g:link controller="CCE" action="studPositionReport"><i class="fa fa-angle-double-right"></i> Student position Report</g:link></li>
                      <li><g:link controller="CCE" action="studTransferReport"><i class="fa fa-angle-double-right"></i> Student transfer Report</g:link></li>
-                     <li><g:link controller="studTeachGraphs" action="passPerf"><i class="fa fa-angle-double-right"></i> Student Class Pass Performance</g:link>
+                     <li><g:link controller="studTeachGraphs" action="passPerf"><i class="fa fa-angle-double-right"></i> Student Pass Performance</g:link>
                      <li><g:link controller="studTeachGraphs" action="gradeDist"><i class="fa fa-angle-double-right"></i> Student Grade Wise Distribution</g:link>
                      <li><g:link controller="studTeachGraphs" action="studPerf"><i class="fa fa-angle-double-right"></i> Student Performance</g:link>
                      <li><g:link controller="studTeachGraphs" action="gdAvgLowStudPerf"><i class="fa fa-angle-double-right"></i>Good/Avg/Low Students</g:link>
@@ -332,6 +332,25 @@
                <!-- <li><g:link controller="CCE" action="studCbseOptReport"><i class="fa fa-angle-double-right"></i> Student Optional Subject</g:link></li>   -->
                <!-- <li><g:link controller="studTeachGraphs" action="studTeachRatio"><i class="fa fa-angle-double-right"></i> Students Teachers Ratio</g:link></li>
                    	<li><g:link controller="studTeachGraphs" action="teachStat"><i class="fa fa-angle-double-right"></i> Trained Teacher Statistics</g:link></li> -->	
+                </ul>
+            </li>
+            
+             <li class="treeview" id="eleven">
+                <a href="javascript:">
+                    <i class="fa fa-building"></i> <span>Performance Analysis</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                	<li><g:link controller="performanceCbse" action="classPref"><i class="fa fa-angle-double-right"></i>Class Performance</g:link></li>
+                	<li><g:link controller="performanceCbse" action="teachStd"><i class="fa fa-angle-double-right"></i>Trained Teacher Vs Students</g:link></li>
+                	<li><g:link controller="performanceCbse" action="stdTeachRatio"><i class="fa fa-angle-double-right"></i>Student Teacher Ratio</g:link></li>
+                	<li><g:link controller="performanceCbse" action="coSchoImpact"><i class="fa fa-angle-double-right"></i>Co-Scholastic Impact</g:link></li>
+                	<li><g:link controller="performanceCbse" action="acadAnalysis"><i class="fa fa-angle-double-right"></i>Academic Analysis</g:link></li>
+                	<li><g:link controller="performanceCbse" action="vocInfo"><i class="fa fa-angle-double-right"></i>Vocational Info</g:link></li>
+                	<li><g:link controller="performanceCbse" action="class7Perf"><i class="fa fa-angle-double-right"></i>Class XII Performance</g:link></li>
+                	<li><g:link controller="performanceCbse" action="class9Perf"><i class="fa fa-angle-double-right"></i>Class X Performance</g:link></li>
+                	<li><g:link controller="performanceCbse" action="subjAnalysis"><i class="fa fa-angle-double-right"></i>Subject Analysis</g:link></li>
+                	<li><g:link controller="performanceCbse" action="stdPref"><i class="fa fa-angle-double-right"></i>Student Performance</g:link></li>
                 </ul>
             </li>
               

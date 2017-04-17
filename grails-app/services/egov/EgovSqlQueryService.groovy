@@ -5,7 +5,7 @@ class EgovSqlQueryService {
 
     def newSQLInstance() {
 		def db = [url: 'jdbc:mysql://localhost/cce_egov?zeroDateTimeBehavior=convertToNull',
-				  user: 'root', password: '@mm@123', driver: 'com.mysql.jdbc.Driver']
+				  user: '', password: '', driver: 'com.mysql.jdbc.Driver']
 		def sql = Sql.newInstance(db.url, db.user, db.password, db.driver)
 		return sql
     }
